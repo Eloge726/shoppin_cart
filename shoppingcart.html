@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/photos/man-at-the-shopping-picture-id868718238?k=6&m=868718238&s=612x612&w=0&h=ZUPCx8Us3fGhnSOlecWIZ68y3H4rCiTnANtnjHk0bvo=" class="d-block w-100" alt="..." width="100%" height="500px">
+              </div>
+              <div class="carousel-item">
+                <img src="https://image.shutterstock.com/image-photo/young-happy-summer-shopping-woman-260nw-611719892.jpg" class="d-block w-100" alt="..." width="100%" height="500px">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img.freepik.com/photos-gratuite/jeune-fille-est-titulaire-sac-shopping-beaute_1150-13673.jpg?size=626&ext=jpg" class="d-block w-100" alt="..." width="100%" height="500px">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div> 
+          <div class="container">
+            <div class="card shopping-cart">
+                     <div class="card-header bg-dark text-light">
+                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                         Shipping cart
+                         <a href="" class="btn btn-outline-info btn-sm pull-right">Continiu shopping</a>
+                         <div class="clearfix"></div>
+                     </div>
+                     <div class="card-body">
+                             <!-- PRODUCT -->
+                             <div class="row" id="supp">
+                                 <div class="col-12 col-sm-12 col-md-2 text-center">
+                                         <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                                 </div>
+                                 <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                                     <h4 class="product-name"><strong>Product Name</strong></h4>
+                                     <h4  >
+                                         <small>Product description</small>
+                                     </h4>
+                                     <span onclick="styling('id1')"> <i class="far fa-heart" id='id1'></i></span>
+                                 </div>
+                                  
+                                 <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                                     <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                         <h6><strong> <span id='p1'>80</span> <span class="text-muted">£</span></strong></h6>
+                                     </div>
+                                     <div class="col-4 col-sm-4 col-md-4">
+                                         <div class="quantity">
+                                             <input type="button" value="+" class="plus" id='bt1' onclick="increase('nb1','p1',80,'tot')">
+                                             <input type="number" step="1" max="99" min="1" value="0" title="Qty" class="qty"
+                                                    size="4" id='nb1'>
+                                             <input type="button" value="-" class="minus" id='bt1' onclick="decrease('nb1', 'p1', 80,'tot')">
+                                         </div>
+                                     </div>
+                                     <div class="col-2 col-sm-2 col-md-2 text-right">
+                                         <button type="button" class="btn btn-outline-danger btn-xs" onclick="supprimer ('supp')">
+                                             <i class="fa fa-trash" aria-hidden="true"></i>
+                                         </button>
+                                     </div>
+                                 </div>
+                             </div>
+                             <hr>
+                             <!-- END PRODUCT -->
+                             <!-- PRODUCT -->
+                             <div class="row" id="supp2">
+                                 <div class="col-12 col-sm-12 col-md-2 text-center">
+                                         <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                                 </div>
+                                 <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                                     <h4 class="product-name"><strong>Product Name</strong></h4>
+                                     <h4>
+                                         <small>Product description</small>
+                                     </h4>
+                                     <span onclick="styling('id2')"> <i class="far fa-heart" id='id2'></i></span>
+                                 </div>
+                                
+                                 <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                                     <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                         <h6><strong><span id='p2'>120</span><span class="text-muted">£</span></strong></h6>
+                                     </div>
+                                     <div class="col-4 col-sm-4 col-md-4">
+                                         <div class="quantity">
+                                             <input type="button" value="+" class="plus" onclick="increase('nb2','p2',120,'tot')">
+                                             <input type="number" step="1" max="99" min="1" value="0" title="Qty" class="qty"
+                                                    size="4" id='nb2'>
+                                             <input type="button" value="-" class="minus" id='bt1' onclick="decrease('nb2', 'p2', 120,'tot')">
+                                         </div>
+                                     </div>
+                                     <div class="col-2 col-sm-2 col-md-2 text-right">
+                                         <button type="button" class="btn btn-outline-danger btn-xs" onclick="supprimer ('supp2')">
+                                             <i class="fa fa-trash" aria-hidden="true"></i>
+                                         </button>
+                                     </div>
+                                 </div>
+                             </div>
+                             <hr>
+                             <!-- END PRODUCT -->
+                         <div class="pull-right">
+                             <a href="" class="btn btn-outline-secondary pull-right">
+                                 Update shopping cart
+                             </a>
+                         </div>
+                     </div>
+                     <div class="card-footer">
+                         <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                             <div class="row">
+                                 <div class="col-6">
+                                     <input type="text" class="form-control" placeholder="cupone code">
+                                 </div>
+                                 <div class="col-6">
+                                     <input type="submit" class="btn btn-default" value="Use cupone">
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="pull-right" style="margin: 10px">
+                             <input type="button" class="btn btn-success pull-right" value="Checkout" onclick="somme('nb1','nb2',80,120,'tot')"></a>
+                             <div class="pull-right" style="margin: 5px">
+                                 Total price: <span id="tot">0</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+         </div> 
+      </main>
+      <script src="store.js"></script>
+
+      <script src="https://kit.fontawesome.com/46580fbbab.js" crossorigin="anonymous"></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
